@@ -1,3 +1,5 @@
-*.o
 *.a
+*.o
 obj
+compile_commands.json
+.cache
