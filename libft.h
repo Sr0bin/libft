@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:57:22 by rorollin          #+#    #+#             */
-/*   Updated: 2025/01/13 19:25:36 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/01/14 16:58:31 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_valid_base(char *base);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
-void	ft_putnbr_base(long long int n, char *base);
+size_t	ft_putnbr_base_fd(int fd,long long int n, char *base);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
