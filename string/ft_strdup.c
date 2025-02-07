@@ -6,11 +6,10 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 18:30:50 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:55:08 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:00:32 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "memory.h"
 #include "string.h"
 
 char	*ft_strdup(const char *s)
