@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/07 17:03:25 by rorollin         ###   ########.fr        #
+#    Updated: 2025/02/07 18:22:22 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,16 +33,21 @@ SOURCES_CHAR = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c 
 SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_print_x.c  \
 					ft_print_i.c ft_print_s.c ft_print_u.c ft_print_c.c ft_parser.c ft_format.c
 
-SOURCES_DIR = string/ memory/ list/ i_o/ char/ ft_printf/
+SOURCES_GET_NEXT_LINE = get_next_line.c ft_strjoin_gnl.c
 
-SOURCES_DIR_C = $(addsuffix %.c, $(SOURCES_DIR))
+SOURCES_DIR = string/ memory/ list/ i_o/ char/ ft_printf/
 
 SOURCES = $(addprefix string/, $(SOURCES_STRING))\
 		$(addprefix memory/, $(SOURCES_MEMORY))\
 		$(addprefix list/, $(SOURCES_LIST))\
 		$(addprefix i_o/, $(SOURCES_I_O))\
 		$(addprefix char/, $(SOURCES_CHAR))\
-		$(addprefix ft_printf/, $(SOURCES_FT_PRINTF))
+		$(addprefix ft_printf/, $(SOURCES_FT_PRINTF))\
+		$(addprefix get_next_line/, $(SOURCES_GET_NEXT_LINE))
+
+#DEPS##########################
+
+DEPS = $(SOURCES:%.c=$(OBJ_DIR)/%.d)
 
 #OBJECTS#######################
 
@@ -54,7 +59,7 @@ OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
 
 HEADERS_DIR = include/ 
 
-HEADERS_NAME = ft_printf.h char.h i_o.h list.h memory.h string.h
+HEADERS_NAME = ft_printf.h char.h i_o.h list.h memory.h string.h get_next_line.h
 
 HEADERS = $(addprefix include/, $(HEADERS_NAME))
 
@@ -63,7 +68,7 @@ INCLUDES = $(addprefix -I , $(HEADERS_DIR))
 #COMPILER#####################
 
 COMPILER = cc
-CFLAGS = -Wall -Wextra -Werror -ggdb3
+CFLAGS = -Wall -Wextra -Werror -MMD -MP -ggdb3
 ARCHIVER = ar
 
 all: $(NAME)
@@ -72,9 +77,11 @@ $(NAME): $(OBJECTS)
 	@$(ARCHIVER) -rcs $@ $(OBJECTS)
 	@echo "$(NAME) built succesfully."
 
-$(OBJ_DIR)/%.o: %.c $(HEADERS)  
+$(OBJ_DIR)/%.o: %.c 
 	mkdir -p $(dir $@)
 	$(COMPILER) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+-include $(DEPS)
 
 clean:
 	rm -rf $(OBJ_DIR)
