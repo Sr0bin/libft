@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include "string.h"
-#include "memory.h"
 
 static size_t	contain_nl(char *str)
 {
