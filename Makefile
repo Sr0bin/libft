@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/07 16:53:05 by rorollin         ###   ########.fr        #
+#    Updated: 2025/02/07 17:03:25 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,11 +72,8 @@ $(NAME): $(OBJECTS)
 	@$(ARCHIVER) -rcs $@ $(OBJECTS)
 	@echo "$(NAME) built succesfully."
 
-$(OBJ_DIR):
-	@mkdir $@
-
-$(OBJ_DIR)/%.o: %.c $(HEADERS) | $(OBJ_DIR) 
-	@mkdir -p $(dir $@)
+$(OBJ_DIR)/%.o: %.c $(HEADERS)  
+	mkdir -p $(dir $@)
 	$(COMPILER) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
@@ -90,4 +87,4 @@ re:
 	$(MAKE) fclean 
 	$(MAKE) all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re test
