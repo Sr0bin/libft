@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/12 17:50:27 by rorollin         ###   ########.fr        #
+#    Updated: 2025/02/12 20:39:05 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SOURCES_CHAR = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c 
 			   ft_toupper.c ft_tolower.c ft_issign.c
 
 SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_print_x.c  \
-					ft_print_i.c ft_print_s.c ft_print_u.c ft_print_c.c ft_parser.c ft_format.c
+					ft_print_i.c ft_print_s.c ft_print_u.c ft_print_c.c ft_parser.c ft_format.c\
+					ft_dprintf.c
 
 SOURCES_GET_NEXT_LINE = get_next_line.c ft_strjoin_gnl.c
 
