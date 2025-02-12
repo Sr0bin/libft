@@ -6,13 +6,13 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 20:12:52 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:16:00 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/02/12 20:37:54 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_parser(char *str, va_list args)
+size_t	ft_parser(char *str, va_list args, int fd)
 {
 	size_t	i;
 	size_t	bytes_written;
@@ -23,7 +23,7 @@ size_t	ft_parser(char *str, va_list args)
 	{
 		if (str[i] == '%')
 		{
-			bytes_written += ft_format(str[++i], args);
+			bytes_written += ft_format(str[++i], args, fd);
 			if (str[i] != '\0')
 				i++;
 		}
@@ -31,7 +31,7 @@ size_t	ft_parser(char *str, va_list args)
 			break ;
 		if (str[i] != '%')
 		{
-			bytes_written += ft_putchar_fd(str[i], 1);
+			bytes_written += ft_putchar_fd(str[i], fd);
 			i++;
 		}
 	}
