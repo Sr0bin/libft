@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/07 18:34:55 by rorollin         ###   ########.fr        #
+#    Updated: 2025/02/12 17:50:27 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,23 +46,21 @@ SOURCES = $(addprefix string/, $(SOURCES_STRING))\
 		$(addprefix ft_printf/, $(SOURCES_FT_PRINTF))\
 		$(addprefix get_next_line/, $(SOURCES_GET_NEXT_LINE))
 
-#DEPS##########################
-
-DEPS = $(SOURCES:%.c=$(OBJ_DIR)/%.d)
-
 #OBJECTS#######################
 
 OBJ_DIR = obj
 
 OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
 
+#DEPS##########################
+
+DEPS = $(SOURCES:%.c=$(OBJ_DIR)/%.d)
+
 #INCLUDES#######################
 
 HEADERS_DIR = include/ 
 
 HEADERS_NAME = ft_printf.h char.h i_o.h list.h memory.h string.h get_next_line.h
-
-HEADERS = $(addprefix include/, $(HEADERS_NAME))
 
 INCLUDES = $(addprefix -I , $(HEADERS_DIR))
 
