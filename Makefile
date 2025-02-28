@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/12 20:39:05 by rorollin         ###   ########.fr        #
+#    Updated: 2025/02/28 06:40:39 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME = libft.a
 SOURCES_STRING = ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
 				 ft_atoi.c ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_itoa.c ft_valid_base.c \
 				 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c ft_striteri.c ft_strlen_c.c\
-				 ft_sub_n_str.c
+				 ft_sub_n_str.c ft_validnumber.c
 
 SOURCES_MEMORY = ft_memset.c ft_bzero.c ft_memcpy.c ft_memchr.c ft_memcmp.c ft_memmove.c ft_calloc.c
 
