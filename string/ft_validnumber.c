@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 06:33:49 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/28 06:49:20 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/03/28 10:35:26 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static size_t	ft_charstatus(int c)
 		return (3);
 	return (0);
 }
+
 size_t	ft_validnumber(const char str[static 1])
 {
 	size_t	i;

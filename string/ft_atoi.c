@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:07:30 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/28 03:53:50 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/03/28 10:37:43 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ int	ft_atoi(const char *nptr)
 
 long long	ft_atol(const char *nptr)
 {
-	size_t	i;
-	long long		sign;
+	size_t		i;
+	long long	sign;
 
 	i = 0;
 	sign = 1;
