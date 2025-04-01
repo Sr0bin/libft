@@ -6,9 +6,11 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 13:37:08 by rorollin          #+#    #+#             */
-/*   Updated: 2024/11/22 13:43:16 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:47:41 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "char.h"
 
 int	ft_toupper(int c)
 {

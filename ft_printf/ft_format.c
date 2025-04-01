@@ -6,13 +6,13 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 20:20:01 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/12 20:37:42 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 16:00:06 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_format(char c, va_list args, int fd)
+ssize_t	ft_format(char c, va_list args, int fd)
 {
 	if (c == 'c')
 		return (ft_print_c(fd, (void *) va_arg(args, int *)));
@@ -25,7 +25,7 @@ size_t	ft_format(char c, va_list args, int fd)
 	if (c == 'p')
 		return (ft_print_p(fd, (void *) va_arg(args, void *)));
 	if (c == 'u')
-		return (ft_print_u(fd, (void *) va_arg(args, uint *)));
+		return (ft_print_u(fd, (void *) va_arg(args, t_uint *)));
 	if (c == 'x')
 		return (ft_print_x(fd, (void *) va_arg(args, int *)));
 	if (c == 'X')

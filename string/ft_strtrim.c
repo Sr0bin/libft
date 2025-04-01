@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 20:12:26 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:55:08 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:32:26 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		i++;
 	}
-	return (ft_substr(s1, min_n, max_n - min_n));
+	return (ft_substr(s1, (unsigned int) min_n, max_n - min_n));
 }
