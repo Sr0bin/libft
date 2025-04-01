@@ -6,29 +6,29 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:09:40 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:09:07 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:44:50 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 #include "i_o.h"
 
-size_t	ft_uputnbr_base_fd(int fd, unsigned long long int n, char *base)
+ssize_t	ft_uputnbr_base_fd(int fd, unsigned long long int n, char *base)
 {
-	int		size_base;
-	size_t	bytes_written;
+	size_t		size_base;
+	ssize_t		byte_written;
 
-	bytes_written = 0;
+	byte_written = 0;
 	if (!ft_valid_base(base))
-		return (bytes_written);
+		return (byte_written);
 	size_base = ft_strlen(base);
 	if (n <= (unsigned long) size_base - 1)
-		bytes_written += ft_putchar_fd(base[n], fd);
+		byte_written += ft_putchar_fd(base[n], fd);
 	else
 	{
-		bytes_written += ft_putnbr_base_fd(fd, n / size_base, base);
+		byte_written += ft_putnbr_base_fd(fd, (long long)(n / size_base), base);
 		n = (n % size_base);
-		bytes_written += ft_putchar_fd(base[n], fd);
+		byte_written += ft_putchar_fd(base[n], fd);
 	}
-	return (bytes_written);
+	return (byte_written);
 }

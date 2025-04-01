@@ -6,13 +6,14 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 19:02:00 by rorollin          #+#    #+#             */
-/*   Updated: 2025/01/15 16:24:20 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:38:29 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "i_o.h"
 
-size_t	ft_putchar_fd(char c, int fd)
+ssize_t	ft_putchar_fd(char c, int fd)
 {
 	return (write(fd, &c, 1));
 }

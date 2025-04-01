@@ -6,16 +6,16 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 20:12:52 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/12 20:37:54 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:59:47 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_parser(char *str, va_list args, int fd)
+ssize_t	ft_parser(char *str, va_list args, int fd)
 {
 	size_t	i;
-	size_t	bytes_written;
+	ssize_t	bytes_written;
 
 	i = 0;
 	bytes_written = 0;

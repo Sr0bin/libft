@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/28 06:40:39 by rorollin         ###   ########.fr        #
+#    Updated: 2025/04/01 15:31:09 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ INCLUDES = $(addprefix -I , $(HEADERS_DIR))
 #COMPILER#####################
 
 COMPILER = cc
-CFLAGS = -Wall -Wextra -Werror -MMD -MP -ggdb3
+# CFLAGS = -Wall -Wextra -Werror -MMD -MP -ggdb3
 ARCHIVER = ar
 
 all: $(NAME)
