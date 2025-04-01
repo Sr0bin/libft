@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/02/28 06:40:39 by rorollin         ###   ########.fr        #
+#    Updated: 2025/04/01 15:06:30 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_
 
 SOURCES_GET_NEXT_LINE = get_next_line.c ft_strjoin_gnl.c
 
+SOURCES_GEOMETRY = matrix.c
+
 SOURCES_DIR = string/ memory/ list/ i_o/ char/ ft_printf/
 
 SOURCES = $(addprefix string/, $(SOURCES_STRING))\
@@ -45,6 +47,7 @@ SOURCES = $(addprefix string/, $(SOURCES_STRING))\
 		$(addprefix i_o/, $(SOURCES_I_O))\
 		$(addprefix char/, $(SOURCES_CHAR))\
 		$(addprefix ft_printf/, $(SOURCES_FT_PRINTF))\
+		$(addprefix geometry/, $(SOURCES_GEOMETRY))\
 		$(addprefix get_next_line/, $(SOURCES_GET_NEXT_LINE))
 
 #OBJECTS#######################
