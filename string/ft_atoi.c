@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:07:30 by rorollin          #+#    #+#             */
-/*   Updated: 2025/03/31 16:48:34 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:30:37 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_atoi(const char *nptr)
 					sign *= -1;
 				i++;
 			}
-			return (sign * ft_add_dec(&nptr[i]));
+			return (sign * (int) ft_add_dec(&nptr[i]));
 		}
 		i++;
 	}

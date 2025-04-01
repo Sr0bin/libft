@@ -67,7 +67,7 @@ char	*get_next_line(int fd)
 		bytes_read = read(fd, buffer[fd], BUFFER_SIZE);
 		if (bytes_read < 0)
 			return (clean_exit(&output, &temp, (char *) buffer));
-		temp = ft_sub_n_str(buffer[fd], bytes_read);
+		temp = ft_sub_n_str(buffer[fd], (size_t) bytes_read);
 		if (temp == NULL && ft_strlen_c(buffer[fd], '\n') != 0)
 			return (clean_exit(&output, &temp, (char *) buffer));
 		reset_buffer(buffer[fd], ft_strlen_c(temp, '\n'));

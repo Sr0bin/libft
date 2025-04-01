@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:23:15 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:55:08 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:33:59 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,11 @@ char	**ft_split(char const *s, char c)
 	while (s[i] != '\0')
 	{
 		if ((s[i] == c) && *crt_char != c)
-			array[j++] = ft_strndup(crt_char, (&s[i] - crt_char));
+			array[j++] = ft_strndup(crt_char, (size_t)(&s[i] - crt_char));
 		if ((s[i] != c && *crt_char == c) || (s[i] == c && *crt_char != c))
 			crt_char = (char *)&s[i];
 		if (s[i++ + 1] == '\0' && *crt_char != c)
-			array[j++] = ft_strndup(crt_char, (&s[i] - crt_char));
+			array[j++] = ft_strndup(crt_char, (size_t)(&s[i] - crt_char));
 		if (j > 0)
 			if (array[j - 1] == NULL)
 				return (free_array((void **) array, j - 1));

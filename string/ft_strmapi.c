@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 18:26:38 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:55:08 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:34:44 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*new_str;
+	unsigned int	i;
+	char			*new_str;
 
 	i = 0;
 	new_str = ft_calloc(ft_strlen(s) + 1, sizeof(char));

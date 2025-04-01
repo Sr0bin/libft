@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:47:29 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/07 16:09:07 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:46:36 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include "i_o.h"
 #include <limits.h>
 
-size_t	ft_putnbr_base_fd(int fd, long long int n, char *base)
+ssize_t	ft_putnbr_base_fd(int fd, long long int n, char *base)
 {
-	int		size_base;
-	size_t	bytes_written;
+	ssize_t		size_base;
+	ssize_t		bytes_written;
 
 	bytes_written = 0;
 	if (!ft_valid_base(base))
 		return (bytes_written);
-	size_base = ft_strlen(base);
+	size_base = (ssize_t) ft_strlen(base);
 	if (n == LLONG_MIN)
 		return (ft_putnbr_base_fd(fd, (n & ~1) / size_base, base)
 			+ ft_putchar_fd(base[(-(n + 1) % size_base) + 1], fd));
