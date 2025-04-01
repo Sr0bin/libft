@@ -6,9 +6,11 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:37:05 by rorollin          #+#    #+#             */
-/*   Updated: 2024/11/28 22:53:10 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/01 15:46:59 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "char.h"
 
 int	ft_isalpha(int c)
 {
