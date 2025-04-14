@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/04/01 16:07:09 by rorollin         ###   ########.fr        #
+#    Updated: 2025/04/09 17:01:58 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_
 
 SOURCES_GET_NEXT_LINE = get_next_line.c ft_strjoin_gnl.c
 
-SOURCES_GEOMETRY = matrix.c
+SOURCES_GEOMETRY = matrixutils.c matrixcalc.c
 
 SOURCES_DIR = string/ memory/ list/ i_o/ char/ ft_printf/
 
