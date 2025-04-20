@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:26:43 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/16 17:30:27 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/20 23:50:15 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_matrix	add_matrix(t_matrix_const a, t_matrix_const b)
 	while (i < a->row_size)
 	{
 		j = 0;
-		while (j  < a->col_size)
+		while (j < a->col_size)
 		{
 			added->index[i][j] = a->index[i][j] + b ->index[i][j];
 			j++;
@@ -52,7 +52,7 @@ t_matrix	substract_matrix(t_matrix_const a, t_matrix_const b)
 	while (i < a->row_size)
 	{
 		j = 0;
-		while (j  < a->col_size)
+		while (j < a->col_size)
 		{
 			substracted->index[i][j] = a->index[i][j] - b ->index[i][j];
 			j++;
@@ -92,7 +92,7 @@ t_matrix	multiply_matrix(t_matrix_const a, t_matrix_const b)
 	while (i < a->row_size)
 	{
 		j = 0;
-		while (j  < b->col_size)
+		while (j < b->col_size)
 		{
 			mult->index[i][j] = clc_sum(a, b, i, j);
 			j++;
@@ -104,7 +104,6 @@ t_matrix	multiply_matrix(t_matrix_const a, t_matrix_const b)
 
 t_matrix	scalar_matrix(t_matrix_const matrix, float scalar)
 {
-
 	size_t		i;
 	size_t		j;
 	t_matrix	scaled;
@@ -116,7 +115,7 @@ t_matrix	scalar_matrix(t_matrix_const matrix, float scalar)
 	while (i < matrix->row_size)
 	{
 		j = 0;
-		while (j  < matrix->col_size)
+		while (j < matrix->col_size)
 		{
 			scaled->index[i][j] = matrix->index[i][j] * scalar;
 			j++;

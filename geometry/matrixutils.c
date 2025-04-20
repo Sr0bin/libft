@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:37:33 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/16 17:09:59 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/20 23:51:59 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,11 @@ t_matrix	create_matrix(size_t row, size_t col)
 	{
 		(matrix->index)[i] = ft_calloc(col + 1, sizeof(float));
 		if ((matrix->index)[i] == NULL)
-		{
-			free_matrix(matrix);
-			return (NULL);
-		}
+			return (free_matrix(matrix));
 		i++;
 	}
 	matrix->col_size = col;
 	matrix->row_size = row;
-
 	return (matrix);
 }
 
@@ -58,7 +54,7 @@ t_matrix	matrix_copy(t_matrix_const matrix)
 	while (i < matrix->row_size)
 	{
 		j = 0;
-		while (j  < matrix->col_size)
+		while (j < matrix->col_size)
 		{
 			copy->index[i][j] = matrix->index[i][j];
 			j++;
@@ -68,17 +64,18 @@ t_matrix	matrix_copy(t_matrix_const matrix)
 	return (copy);
 }
 
-void	free_matrix(t_matrix matrix)
+void	*free_matrix(t_matrix matrix)
 {
 	size_t	i;
 
 	i = 0;
 	if (matrix == NULL)
-		return ;
+		return (NULL);
 	while (i <= matrix->row_size)
 		free(matrix->index[i++]);
 	free((void *) matrix->index);
 	free(matrix);
+	return (NULL);
 }
 
 float	matrix_get_coord(t_matrix matrix, size_t row, size_t col)
@@ -90,37 +87,23 @@ float	matrix_get_coord(t_matrix matrix, size_t row, size_t col)
 
 void	matrix_set_coord(t_matrix matrix, size_t row, size_t col, float value)
 {
-	matrix->index[row][col] = value; 
+	matrix->index[row][col] = value;
 }
-
-#include <stdio.h>
-void	print_matrix(t_matrix_const matrix)
-{
-	size_t	i;
-	size_t	j;
-	i = 0;
-	while (i < matrix->row_size || i == 0)
-	{
-		j = 0;
-		while (j < matrix->col_size || j == 0)
-		{
-			printf("%f ",(double)  matrix->index[i][j]);
-			j++;
-		}
-		printf("\n");
-		i++;
-	}
-}
-// TODO(rorollin): Code the thing
-/**/
-/*double	det_matrix(t_matrix_const matrix)*/
+/*#include <stdio.h>*/
+/*void	print_matrix(t_matrix_const matrix)*/
 /*{*/
-/*	double	det;*/
-/**/
-/*	det = 0;*/
-/*	if (matrix->col_size != matrix->row_size)*/
-/*		return (0);*/
-/*	return (det);*/
+/*	size_t	i;*/
+/*	size_t	j;*/
+/*	i = 0;*/
+/*	while (i < matrix->row_size || i == 0)*/
+/*	{*/
+/*		j = 0;*/
+/*		while (j < matrix->col_size || j == 0)*/
+/*		{*/
+/*			printf("%f ",(double)  matrix->index[i][j]);*/
+/*			j++;*/
+/*		}*/
+/*		printf("\n");*/
+/*		i++;*/
+/*	}*/
 /*}*/
-
-
