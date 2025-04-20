@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:28:19 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/14 13:10:36 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:29:04 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ t_matrix	create_matrix(size_t row, size_t col);
 void	free_matrix(t_matrix matrix);
 t_matrix	matrix_copy(t_matrix_const matrix);
 float	matrix_get_coord(t_matrix matrix, size_t row, size_t col);
+void	matrix_set_coord(t_matrix matrix, size_t row, size_t col, float value);
+void	*matrix_set_identity(t_matrix matrix);
 t_matrix	substract_matrix(t_matrix_const a, t_matrix_const b);
 t_matrix	add_matrix(t_matrix_const a, t_matrix_const b);
 t_matrix	scalar_matrix(t_matrix_const matrix, float scalar);

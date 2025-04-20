@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char.h                                             :+:      :+:    :+:   */
+/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 15:47:11 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/20 20:49:08 by rorollin         ###   ########.fr       */
+/*   Created: 2025/04/20 20:43:51 by rorollin          #+#    #+#             */
+/*   Updated: 2025/04/20 20:49:48 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHAR_H
-# define CHAR_H
+#include "char.h"
 
-# include <stdlib.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_issign(char c);
-size_t	ft_iswhitespace(char c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-#endif
+size_t	ft_iswhitespace(char c)
+{
+	if (c == ' ' || c == '	' || c == '\n')
+		return ((size_t) c);
+	return (0);
+}

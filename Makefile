@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/04/09 17:01:58 by rorollin         ###   ########.fr        #
+#    Updated: 2025/04/20 20:46:03 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SOURCES_I_O = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 				ft_uputnbr_base_fd.c ft_putnbr_base_fd.c
 
 SOURCES_CHAR = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-			   ft_toupper.c ft_tolower.c ft_issign.c
+			   ft_toupper.c ft_tolower.c ft_issign.c ft_iswhitespace.c
 
 SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_print_x.c  \
 					ft_print_i.c ft_print_s.c ft_print_u.c ft_print_c.c ft_parser.c ft_format.c\
@@ -37,7 +37,7 @@ SOURCES_FT_PRINTF = ft_printf.c ft_print_d.c ft_print_p.c ft_print_x_upper.c ft_
 
 SOURCES_GET_NEXT_LINE = get_next_line.c ft_strjoin_gnl.c
 
-SOURCES_GEOMETRY = matrixutils.c matrixcalc.c
+SOURCES_GEOMETRY = matrixutils.c matrixoperation.c matrixelem.c
 
 SOURCES_DIR = string/ memory/ list/ i_o/ char/ ft_printf/
 

@@ -1,15 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrixcalc.c                                       :+:      :+:    :+:   */
+/*   matrixoperation.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 17:00:13 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/14 13:10:23 by rorollin         ###   ########.fr       */
+/*   Created: 2025/04/16 17:26:43 by rorollin          #+#    #+#             */
+/*   Updated: 2025/04/16 17:30:27 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "geometry.h"
 
@@ -126,4 +125,3 @@ t_matrix	scalar_matrix(t_matrix_const matrix, float scalar)
 	}
 	return (scaled);
 }
-

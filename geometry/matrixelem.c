@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char.h                                             :+:      :+:    :+:   */
+/*   matrixelem.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 15:47:11 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/20 20:49:08 by rorollin         ###   ########.fr       */
+/*   Created: 2025/04/16 17:28:22 by rorollin          #+#    #+#             */
+/*   Updated: 2025/04/16 17:30:27 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHAR_H
-# define CHAR_H
+#include "geometry.h"
 
-# include <stdlib.h>
+void	*matrix_set_identity(t_matrix matrix)
+{
+	size_t	i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_issign(char c);
-size_t	ft_iswhitespace(char c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-#endif
+	i = 0;
+	if (matrix->col_size != matrix->row_size)
+		return (NULL);
+	while (i < matrix->col_size)
+	{
+		matrix_set_coord(matrix, i, i, 1);
+		i++;
+	}
+	return (matrix);
+}

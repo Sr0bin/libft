@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:37:33 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/14 14:14:07 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:09:59 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,18 +88,23 @@ float	matrix_get_coord(t_matrix matrix, size_t row, size_t col)
 	return (matrix->index[row][col]);
 }
 
+void	matrix_set_coord(t_matrix matrix, size_t row, size_t col, float value)
+{
+	matrix->index[row][col] = value; 
+}
+
 #include <stdio.h>
 void	print_matrix(t_matrix_const matrix)
 {
 	size_t	i;
 	size_t	j;
 	i = 0;
-	while (i < matrix->row_size)
+	while (i < matrix->row_size || i == 0)
 	{
 		j = 0;
-		while (j < matrix->col_size)
+		while (j < matrix->col_size || j == 0)
 		{
-			printf("%.2f ", (double) matrix->index[i][j]);
+			printf("%f ",(double)  matrix->index[i][j]);
 			j++;
 		}
 		printf("\n");
