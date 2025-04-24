@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:37:33 by rorollin          #+#    #+#             */
-/*   Updated: 2025/04/20 23:51:59 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/04/24 20:35:41 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_matrix	create_matrix(size_t row, size_t col)
 	i = 0;
 	if (matrix == NULL)
 		return (NULL);
+	matrix->col_size = col;
+	matrix->row_size = row;
 	matrix->index = (float **) ft_calloc(row + 1, sizeof(float *));
 	if (matrix->index == NULL)
 	{
@@ -36,8 +38,6 @@ t_matrix	create_matrix(size_t row, size_t col)
 			return (free_matrix(matrix));
 		i++;
 	}
-	matrix->col_size = col;
-	matrix->row_size = row;
 	return (matrix);
 }
 
