@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 20:33:05 by rorollin          #+#    #+#              #
-#    Updated: 2025/04/20 20:46:03 by rorollin         ###   ########.fr        #
+#    Updated: 2025/07/19 16:34:18 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,13 @@ NAME = libft.a
 SOURCES_STRING = ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
 				 ft_atoi.c ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_itoa.c ft_valid_base.c \
 				 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c ft_striteri.c ft_strlen_c.c\
-				 ft_sub_n_str.c ft_validnumber.c
+				 ft_sub_n_str.c ft_validnumber.c ft_strcmp.c
 
 SOURCES_MEMORY = ft_memset.c ft_bzero.c ft_memcpy.c ft_memchr.c ft_memcmp.c ft_memmove.c ft_calloc.c
 
 SOURCES_LIST = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
-				ft_lstmap.c
+				ft_lstmap.c ft_lstpop.c
 
 SOURCES_I_O = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 				ft_uputnbr_base_fd.c ft_putnbr_base_fd.c
