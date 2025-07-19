@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:53:27 by rorollin          #+#    #+#             */
-/*   Updated: 2025/02/28 06:42:47 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/07/19 19:23:35 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 size_t		ft_valid_base(char *base);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_strcmp(const char *s1, const char *s2);
 int			ft_atoi(const char *nptr);
 long long	ft_atol(const char *nptr);
 char		*ft_strchr(const char *s, int c);
