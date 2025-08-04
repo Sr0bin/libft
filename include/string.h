@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:53:27 by rorollin          #+#    #+#             */
-/*   Updated: 2025/07/19 19:23:35 by rorollin         ###   ########.fr       */
+/*   Updated: 2025/07/31 23:36:09 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_itoa(int n);
+char		*ft_strrsz(char **str, size_t new_size);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlen_c(char *str, char c);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+char		*ft_strcat(char **str1, char *str2);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t		ft_validnumber(const char str[static 1]);
